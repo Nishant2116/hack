@@ -1,0 +1,107 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}{% endblock head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} {% endblock title %} Titanic Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body style='background-color:#FAD8AA;'>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark " style="height: 100px;" >
+  <div class="container-fluid">
+    <img src="/static/img/1.png" class="d-block" alt="..." width="100" height="100">
+    <a class="navbar-brand fs-3" href="#">Titanic</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link activ fs-5" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="/about">About us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Models
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/services">Logistic Regression</a></li>
+            <li><a class="dropdown-item" href="#">KNN</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">SVM</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="/contact">Contact us</a>
+        </li>
+        
+      </ul>
+      <form class="d-flex px-4" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 10px;">
+        <button class="btn btn-outline-success" type="submit" style="border-radius: 10px;">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+{% block body %}{% endblock body %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <footer class="py-5 border-top border-dark py-4">
+      <div class="row mx-4">
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Projects</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Contact Us</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://medium.com/@nishantd369" class="nav-link p-0 text-muted">blog</a></li>
+            <li class="nav-item mb-2"><a href="mailto:wish@gmail.com" class="nav-link p-0 text-muted">Email Us</a></li>
+            <li class="nav-item mb-2"><a href="tel:+8767281347" class="nav-link p-0 text-muted">Call Us</a></li>
+            <li class="nav-item mb-2"><a href="https://www.google.com/maps/place/JSPM+Group+Of+Institutes,+Hadapsar" class="nav-link p-0 text-muted">Visit Us</a></li>
+          </ul> 
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-4">
+          <form>
+            <h5>Feedback</h5>
+  <p>help us improve our performance in the future.</p>
+  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+    <label for="feedback" class="visually-hidden">Feedback</label>
+    <textarea id="feedback" class="form-control" placeholder="Please provide your feedback here" rows="3"></textarea>
+    
+  </div>
+  <button class="btn btn-primary btn-m my-2" type="button">Submit</button>
+  
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex justify-content-between border-top border-dark" style='padding-top:20px'>
+        <div class="col-lg-6 text-center text-lg-start f-size-14 text-gray-500 mx-4">
+          © Wish 2023 | All Rights Reserved
+      </div>
+      
+        <ul class="list-unstyled d-flex" style='margin-right:40px;'>
+          <li class="ms-3"><a class="link-dark" href="https://github.com/Nishant2116" target="_blank"><img src='/static/img/github.png' alt='github' height='40'></a></li>
+          <li class="ms-3"><a class="link-dark" href="https://www.instagram.com/_nd_216/" target="_blank"><img src='/static/img/insta.png' alt='instagram' height='40'></a></li>
+          <li class="ms-3"><a class="link-dark" href="https://twitter.com/Nishant_216" target="_blank"><img src='/static/img/twitter.png' alt='twitter' height='40'></a></li>
+          <li class="ms-3"><a class="link-dark" href="https://www.linkedin.com/in/nishant-deshmukh-1a3836185/" target="_blank"><img src='/static/img/linkedin.png' alt='linkedin' height='40'></a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+</html>

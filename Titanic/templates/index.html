@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+
+{% block head %} <head>
+  <title>My Page</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'Titanic/css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'Titanic/css/bootstrap-icons.css' %}">
+  <script src="{% static 'Titanic/js/script.js' %}"></script>
+
+
+</head>{% endblock head %}
+
+
+
+{% block body %}
+
+<div id="carouselExampleCaptions" class="carousel slide" >
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/img/3.jpg" class="d-block w-100" alt="..." width="1200" height="550">
+        <div class="carousel-caption d-none d-md-block">
+          
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/4.jpg" class="d-block w-100" alt="..." width="1200" height="550">
+
+        <div class="carousel-caption d-none d-md-block">
+          
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/5.jpg" class="d-block w-100" alt="..." width="1200" height="550">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <script src="{% static 'Titanic/js/script.js' %}"></script>
+  </div>
+<div class="row align-items-md-stretch mx-2">
+  <div class="p-5 rounded-3 col-md-4 col-6 mx-4 my-5" style="background-color:grey;">
+    <div class="container-fluid py-2">
+      <h1 class="display-6 fw-bold fs-3" >Titanic Dataset</h1>
+      <p class="col-md-10 fs-5">The titanic.csv file contains data for 887 of the real Titanic passengers. 
+        Each row represents one person. The columns describe different attributes about the person 
+        including whether they survived (S), their age (A), their passenger-class (C), their sex (G) 
+        and the fare they paid (X).</p>
+        <a aria-current="page" href="/dataset">
+          <button class="btn btn-primary btn-lg" type="button">Explore Dataset</button></a>
+    </div>
+
+
+    <div class="col-md-11 py-5">
+      <div class="h-100 p-5 text-bg-dark rounded-3">
+        <h2>Project Description</h2>
+        <p>We built a machine learning model that predicts survival rates of Titanic passengers based on their 
+          information. The project provides insights into the factors that contributed to survival rates 
+          during the disaster.</p>
+        <button class="btn btn-outline-light" type="button">Explore Project</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-7 my-5">
+    <div class="h-100 p-5 text-bg-dark rounded-3 mx-2">
+      <h2>About us</h2>
+      <p>We are a team of engineering students specializing in machine learning and deep learning. Our 
+        focus is on developing projects that make a positive impact on the community. Our work ranges from 
+        creating predictive models for healthcare to image recognition systems for security purposes.
+        <br><br>
+        Our team is passionate about using our skills to develop projects that make a positive impact on 
+        society. We believe in the power of technology to improve people's lives, and we are committed to 
+        creating innovative solutions that address real-world problems.
+        <br>
+        Through our hard work and dedication, we have been able to create several machine learning projects 
+        that have provided valuable insights to the community. We hope to continue developing innovative 
+        projects that have a positive impact, and we greatly appreciate any support you can provide us. 
+        Thank you!</p>
+      <a href="/about"><button class="btn btn-outline-secondary" type="button">Know more</button></a>
+
+
+
+      <div class="col-md-10 col-6 my-4 mx-4 py-5">
+        <div class="bg-light border rounded-3 mx-2" style="padding-top:30px;">
+          <div style="position:relative;">
+            <h2 style="position:absolute; margin-left:50px; margin-right:20px; margin-bottom:20px; 
+            color:black;">Support</h2>
+            <img src="/static/img/buy4.png" alt="Your Image" width="555" height="270">
+            <p class="my-4" style="position:absolute; bottom:10px; left:290px; right:20px; color:black;">
+              We've developed multiple machine learning projects providing valuable insights. Support our 
+              work by buying us a coffee. Thank you!</p>
+          </div>
+          <a href="/about"><button class="btn btn-outline-primary" type="button" style="margin-left:50px; 
+            margin-right:20px; margin-top:20px; margin-bottom:30px;">Buy us a coffee!</button></a>
+        </div>
+      </div>
+      
+      <style>
+      @media (max-width: 428px) {
+        .col-md-10 {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+        
+        img {
+          width: 100%;
+        }
+        
+        p {
+          position: static;
+          color: black;
+          margin: 10px 20px;
+        }
+        
+        h2 {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+      </style>
+      
+      
+      
+    </div>
+    
+  </div>
+</div>
+  
+
+{% endblock body %}
+
